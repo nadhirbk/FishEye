@@ -1,17 +1,24 @@
 .hero {
   width: 100%;
+  min-height: 315px;
   background-color: #fafafa;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   gap: 40px;
-  padding: 0 50px;
+  padding: 20px 50px;
+  flex-direction: column;
+  @media (min-width: $tablet) {
+    flex-direction: row;
+  }
 
   &_description {
     display: flex;
     flex-direction: column;
     flex: 1;
+    justify-content: center;
   }
   &_subtext {
     display: flex;
@@ -43,31 +50,17 @@
 
   &_portrait {
     flex: 1;
-    border-radius: 50%;
-    width: 200px;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-  }
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-weight: 700;
-  font-size: 1.125rem;
-  text-align: center;
-  background-color: #901c1c;
-  min-width: 133px;
-  height: 70px;
-  padding: 5px 20px;
-  &:hover {
-    background-color: #db8876;
-    color: black;
+    display: flex;
+    justify-content: center;
+    @media (min-width: $tablet) {
+      justify-content: end;
+    }
+    &_img {
+      width: 200px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      object-fit: cover;
+    }
   }
 }
 
@@ -85,6 +78,7 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   width: 100%;
   gap: 95px;
+  padding-bottom: 80px;
 }
 
 .card {
@@ -97,12 +91,12 @@
     width: 100%;
     &_photo {
       width: 100%;
-      height: 100%;
+      height: 200px;
       object-fit: cover;
     }
     &_video {
       width: 100%;
-      height: 100%;
+      height: 200px;
       object-fit: cover;
     }
   }
@@ -133,6 +127,7 @@
   bottom: 0;
   right: 50px;
   padding: 10px;
-  background: #db8876;
+  background: $button-secondary;
   color: black;
+  border-radius: 5px 5px 0 0;
 }

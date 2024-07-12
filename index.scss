@@ -1,8 +1,11 @@
-// @import "./scripts/components/";
-// @import "./scripts/layouts/";
-// @import "./scripts/features/";
+@import "./sass/index";
+@import "./sass/pages/home";
 
-@import "./scripts/pages/index";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .wrapper {
   display: flex;
@@ -31,8 +34,7 @@ body {
 }
 
 h1 {
-  color: #901c1c;
-  margin-right: 100px;
+  color: $color-primary;
 }
 
 .logo {

@@ -16,8 +16,11 @@
     flex-direction: column;
     justify-content: center;
     &_figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       &_portrait {
-        width: 100%;
+        width: 200px;
         aspect-ratio: 1/1;
         border-radius: 50%;
         object-fit: cover;
@@ -25,22 +28,30 @@
       &_name {
         font-size: 2.5rem;
         font-weight: 400;
-        color: #901c1c;
+        color: $color-secondary;
+        text-align: center;
       }
     }
   }
   &_description {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    gap: 3px;
     &_location {
-      font-size: 2rem;
+      font-size: 1.5rem;
+      color: $color-primary;
+      text-align: center;
     }
     &_tagline {
-      font-size: 1.25rem;
+      font-size: 0.875rem;
+      color: $color-tertiary;
+      text-align: center;
     }
     &_price {
-      font-size: 1rem;
+      font-size: 0.75rem;
+      color: $color-quaternary;
+      text-align: center;
     }
   }
 }
