@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/photographer.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Fisheye</title>
+        <script src="/scripts/pages/photographer.js" type="module"></script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <a href="/">
+                    <img class="header_logo" src="/assets/images/logo.png" alt="logo fisheye" />
+                </a>
+            </header>
+
+            <section class="hero">
+                <div class="hero_description">
+                    <h1 id="name" class="hero_name"></h1>
+                    <div class="hero_subtext">
+                        <p id="location" class="hero_location"></p>
+                        <p id="tagline" class="hero_tagline"></p>
+                    </div>
+                </div>
+                <div class="hero_contact">
+                    <button id="contact" class="button">Contactez-moi</button>
+                </div>
+                <img id="portrait" class="hero_portrait" src="" alt="photo de profile du photographe">
+            </section>
+
+            <div class="toolbar">
+                <div class="toolbar_title">Trier par</div>
+                <select id="sort" value="popularité" title="tri">
+                    <option value="popularité">popularité</option>
+                    <option value="date">date</option>
+                    <option value="titre">titre</option>
+                </select>
+            </div>
+
+            <main id="cards" class="cards">
+                
+            </main>
+            <section class="overlay">
+                1234 likes 300€/jour
+            </section>
+        </div>
+
+        <template id="card-image">
+            <div class="card">
+                <div id="onclick" class="card_link">
+                    <img id="photo" class="card_link_photo" src="" alt="" />
+                </div>
+                <div class="card_description">
+                    <p id="title" class="card_description_title"></p>
+                    <div class="display-like">
+                        <span id="like" class="card_description_like"></span>
+                        <i class="card_description_like_icon fas fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="card-video">
+            <div class="card">
+                <div id="onclick" class="card_link">
+                    <video class="card_link_video" controls>
+                        <source id="video" src="" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="card_description">
+                    <p id="title" class="card_description_title"></p>
+                    <div class="display-like">
+                        <span id="like" class="card_description_like"></span>
+                        <i class="card_description_like_icon fas fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <div class="modal">
+            <div class="modal-frame">
+                <div class="arrow arrow_left" aria-hidden="true">L</div>
+                <div class="sr-only">navigation lightbox gauche</div>
+                <div class="container">
+                    <img class="image" src="" alt="">
+                    <video class="video" controls>
+                        <source class="video_src" src="" type="video/mp4">
+                    </video>
+                </div>
+                <div class="arrow arrow_right" aria-hidden="true"><i class="fa-xs fa-solid fa-star"></i>R</div>
+                <div class="sr-only">navigation lightbox droite</div>
+            </div>
+        </div>
+    </body>
+</html>
